@@ -1,5 +1,6 @@
 # Sorting-ALgorithm-Visualiser
 Live Version deployed on Heroku : https://blooming-earth-27996.herokuapp.com/
+<br>
 A simple program to visualise sort algorithms written in Javascript,HTML and CSS.
 Visualiser for Sorting Algorithms namely:
 
