@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+/************************Tags****************/
+ 
+
+html {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  flex-flow: column wrap;
+}
+body {
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -ms-box-orient: vertical;
+}
+button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 0;  background: rgb(228, 229, 240);
+  color: rgb(37, 43, 133);
+  margin: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: rgb(174, 177, 235);
+  transform:  scale(1.03);
+}
+
+option {
+  color: white;
+  background: rgb(101, 107, 172);
+}
+
+option:checked {
+  background: rgb(44, 50, 162);
+  color: white;
+}
+
+select {
+  padding: 8px 12px;
+  margin: 2px;
+  border: 0;
+  color: white;
+  background: rgb(16, 25, 132);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+
+/********************Classes***********************/
+.chart {
+  flex-grow: 1;
+  display: inline-block;
+  height: 100%;
+  color: white;
+  margin-right: 0.2%;
+  text-align: center;
+  font-size: 0.5em;
+  border-radius: 50px;
+  align-content: center;
+}
+
+.bar {
+  /* width: 50%; */
+  height: 100%;
+  background: linear-gradient( rgb(77, 88, 172),rgb(90, 101, 203));
+  border-radius: 1000px;
+}
+
+.bar:hover {
+  background: linear-gradient(rgb(121, 129, 209), rgb(57, 66, 147));
+}
+.bottom-container {
+  padding: 1% 1%;
+  background: rgb(91, 100, 184);
+  color: rgb(221, 223, 236);
+}
+
+.curr {
+  background: rgb(157, 202, 153);
+  /* background: rgb(23, 32, 169); */
+}
+
+.unsorted {
+  /* background: linear-gradient( rgb(199, 20, 125),rgb(203, 76, 165)); */
+  background: linear-gradient( rgb(223, 223, 228),rgb(255, 255, 255));
+
+}
+
+
+.table {
+  background:rgb(172, 178, 211) ;
+  flex-grow: 1;
+  width: 100%;
+  white-space: nowrap;
+  padding: 12px;
+  background-size: 50px 50px;
+   display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex; 
+  display: flex;
+  flex-direction: column;
+  gap: 0.1%;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+.tableVert{
+  flex-direction: row;
+}
+
+.barVert{
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  gap: 30px;
+}
+
+.header span {
+  font-weight: bold;
+}
+
+.section {
+  flex-grow: 1;
+  padding: 0px 4px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: rgb(84, 88, 134);
+  outline: none;
+  border-radius: 12px;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background: rgb(212, 213, 231);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  border-radius: 12px;
+  height: 25px;
+  background: rgb(212, 213, 231);
+  cursor: pointer;
+}
+
+.disabled {
+  background: grey;
+}
+
+
+
+
+/***********************Media Query********************/
+@media only screen and (max-width: 700px) {
+  .header {
+    /* display: flexbox; */
+    display: flexbox;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+  }
+  .section {
+    position: relative;
+    padding: 12px 4px;
+    width: 50%;
+    
+  }
+}
