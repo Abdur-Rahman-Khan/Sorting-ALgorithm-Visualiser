@@ -5,55 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sorting Algo Visualiser</title>
-    <link href="./styles.css" rel="stylesheet">
+    <link href="./src/styles.css" rel="stylesheet">
 </head>
 
 <body >
-    <div class="bottom-container">
+    <div class="container">
         <div class="heading"><span >Sorting Algorithm visualiser</span>
-            <button onclick="rotateDisplay()">Rotate Display</button>
+            <button id="rotateDisplay">Rotate Display</button>
         </div>
     </div>
     <div class="table"></div>
-    <div class="bottom-container">
+    <div class="container">
         <div class="header">
-            <div class="section">
-                <select>
-                    <option>Bubble Sort</option>
-                    <option>Selection Sort</option>
-                    <option>Insertion Sort</option>      
-                    <option>Merge Sort</option>
-                    <option>Quick Sort</option>
-                    <option>Heap Sort</option>
-                </select>
-            </div>
-            <div class="section">
-                <button name="sort" onclick="sort()" id="sort-btn">Sort</button>
-            </div>
-            <div class="section">
-                <select oninput="shufflenumArray()">
-                    <!-- <option>Fibonacci Numbers</option> -->
-                    <option>Prime Numbers</option>
-                    <option>Random Numbers</option>
-                    <option>Linear Numbers</option>
-                    <option>Square Numbers</option>      
-                    <option>Cube Numbers</option>
-                </select></div>
-            <div class="section">
-                <button onclick="shufflenumArray()">Reshuffle</button>
-            </div>
+            <div class="sbox">
                 <div class="section">
-                    <input class="slider" id="delay-slider" oninput="delayUpdate(this.value)" name="delay-slider"type="range" min="0" max="400" value="40" step="10"><br>
+                    <select>
+                        <option>Bubble Sort</option>
+                        <option>Selection Sort</option>
+                        <option>Insertion Sort</option>      
+                        <option>Merge Sort</option>
+                        <option>Quick Sort</option>
+                        <!-- <option>Heap Sort</option> -->
+                    </select>
+                </div>
+                <div class="section">
+                    <button name="sort" id="sort-btn">Sort</button>
+                </div>
+            </div>
+            <div class="sbox">
+                <div class="section">
+                    <select id="selectShuffle" >
+                        <!-- <option>Fibonacci Numbers</option> -->
+                        <option>Prime Numbers</option>
+                        <option>Random Numbers</option>
+                        <option>Linear Numbers</option>
+                        <option>Square Numbers</option>      
+                        <option>Cube Numbers</option>
+                    </select></div>
+                <div class="section">
+                    <button id="shuffle" >Reshuffle</button>
+                </div>
+            </div>
+            
+                <div class="section">
+                    <input class="slider" id="delay-slider"  name="delay-slider"type="range" min="0" max="400" value="40" step="10"><br>
                     <label name="delay-slider" id="delayValue">Delay</label>
                 </div>
                 <div class="section">
-                    <input class="slider" id="number-slider" onchange="updateSize(this.value)"
-                        oninput="sizeSliderUpdate(this.value)" name="delay-slider" type="range" min="20" max="240" step="20" value="60"><br>
+                    <input class="slider" id="number-slider"  name="delay-slider" type="range" min="20" max="240" step="20" value="60"><br>
                     <label name="number-slider" id="number-value">Array Size</label>
                 </div>
         </div>
     </div>
+    <script type="module" defer src="./src/index.js"></script>
 </body>
-<script src="./index.js"></script>
-
 </html>
