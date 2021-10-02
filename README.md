@@ -6,7 +6,6 @@ Visualiser for Sorting Algorithms namely:
 
 - Bubble Sort
 - Selection Sort
-- Heap Sort
 - Quick Sort
 - Insertion Sort
 - Merge Sort
